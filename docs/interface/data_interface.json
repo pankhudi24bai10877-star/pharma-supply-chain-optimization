@@ -1,0 +1,39 @@
+{
+  "interface_version": "1.0",
+  "description": "Pharmaceutical supply chain data exchanged between project modules",
+  "data_format": "JSON",
+
+  "fields": {
+    "product_id": {
+      "type": "string",
+      "description": "Unique identifier of the medicine",
+      "example": "MED001"
+    },
+
+    "demand": {
+      "type": "integer",
+      "description": "Expected medicine demand in units",
+      "example": 120
+    },
+
+    "lead_time": {
+      "type": "integer",
+      "description": "Expected supplier lead time in days",
+      "example": 3
+    },
+
+    "disruption": {
+      "type": "integer",
+      "description": "Indicates whether a supply disruption occurs",
+      "allowed_values": [0, 1],
+      "example": 0
+    }
+  },
+
+  "example": {
+    "product_id": "MED001",
+    "demand": 120,
+    "lead_time": 3,
+    "disruption": 0
+  }
+}
